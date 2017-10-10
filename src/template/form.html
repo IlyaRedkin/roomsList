@@ -1,0 +1,33 @@
+<div class="page-content">
+    <div class="container card-container">
+        <div class="card">
+            <a href="#" class="link-back">
+                <span class="link-back__icon material-icons">&#xE5C4;</span>
+                <span class="link-back__text" ng-repeat="room in roomsList.list | filter: {id:selectedId}">{{room.number}}</span>
+            </a>
+            <div>
+                <form name="answerForm" action="#" method="get">
+                    <div class="form__newguest-field mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+                        <input tabindex="1" class="mdl-textfield__input" type="text" ng-model="answer.name" id="sample3" autofocus>
+                        <label class="mdl-textfield__label" for="sample3">Имя</label>
+                    </div>
+                    <div>
+                        <input class="form__btn
+                                      mdl-button
+                                      mdl-js-button
+                                      mdl-button--raised
+                                      mdl-button--colored"
+                               type="submit"
+                               ng-click="save(answer, answerForm)"
+                               value="Сохранить">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <p class="page-footer__copyright">copyright</p>
+    </div>
+</footer>
